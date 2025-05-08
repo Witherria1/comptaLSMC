@@ -14,6 +14,17 @@ html, body {
     text-align: center;
 }
 
+/* EFFET SOMBRE POUR LIRE LE TEXTE */
+html::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 /* HEADER NAVIGATION */
 header {
     position: absolute;
@@ -79,17 +90,22 @@ header {
     justify-content: center;
     flex-direction: column;
     padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
     margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffeb3b;
 }
 
 /* TITRES & TEXTES */
@@ -180,9 +196,9 @@ main {
     right: 30px;
     z-index: 2001;
     transition: transform 0.3s ease, color 0.3s ease;
-    background: none; /* Ensure no background color */
-    border: none; /* Remove any border */
-    outline: none; /* Remove focus outline */
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .burger-menu:hover {
@@ -190,34 +206,41 @@ main {
     color: #ff0000;
 }
 
+/* BOUTONS SECTION */
 .button-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background-color: #f4f4f400;
+    background-color: transparent;
 }
 
 .button-container {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .main-button {
-    padding: 20px 40px; /* Augmenté pour des boutons plus grands */
-    font-size: 1.5em; /* Augmenté pour un texte plus grand */
+    padding: 20px 40px;
+    font-size: 1.5em;
     text-decoration: none;
     background-color: #333;
     color: white;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .main-button:hover {
-    background-color: #555;
+    background-color: #ff0000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* RESERVATION FORM */
+/* FORMULAIRE DE RÉSERVATION */
 .reservation-form {
     display: flex;
     flex-direction: column;
@@ -226,8 +249,8 @@ main {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    max-width: 500px; /* Increased width */
-    margin: 150px auto; /* Increased margin to move it further down */
+    max-width: 500px;
+    margin: 150px auto;
 }
 
 .reservation-form label {
@@ -294,7 +317,7 @@ main {
         flex-direction: column;
         background-color: rgba(34, 34, 34, 0.95);
         position: absolute;
-        top: 100%; /* Adjusted to place it below the navbar */
+        top: 100%;
         left: 0;
         width: 100%;
         border-radius: 0;
