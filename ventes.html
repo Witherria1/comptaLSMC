@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Riverside</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+
+            <!-- Bouton menu burger (mobile uniquement) -->
+            <button class="burger-menu" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+
+            <!-- Liens de navigation (menu déroulant sur mobile) -->
+            <nav class="navbar-links mobile-nav" aria-label="Navigation principale">
+                <a href="index.html">🏘️Accueil</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Script pour ouvrir/fermer le menu mobile -->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.mobile-nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+    <section class="reservation-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfatpV1pKcqMIIjIp__jiFfX4IR2V-bxITwPW82JC8UwW74OQ/viewform?usp=dialog" 
+                width="100%" 
+                height="1000" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+            Chargement…
+        </iframe>
+    </section></section>
+</body>
+</html>
